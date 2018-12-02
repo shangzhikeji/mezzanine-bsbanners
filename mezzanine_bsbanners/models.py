@@ -167,7 +167,7 @@ class Slides(RichText):
         max_length=7,
         help_text=_('Call to action button type (colour)')
     )
-    banner = models.ForeignKey(Banners)
+    banner = models.ForeignKey(Banners,on_delete=models.DO_NOTHING)
     image = models.FileField(
         _("Image"),
         upload_to=settings.MEDIA,
